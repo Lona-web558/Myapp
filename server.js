@@ -10,9 +10,6 @@ app.use(express.static('.')); // Serves your index.html file
 const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET } = process.env;
 const base = "https://paypal.com"
 
-
-"; // Keep as sandbox for testing
-
 // Step 1: Authenticate with PayPal
 async function getAccessToken() {
     const resp = await fetch(`${base}/v1/oauth2/token`, {
